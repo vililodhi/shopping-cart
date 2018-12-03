@@ -1,63 +1,66 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody,
+  CardTitle } from 'reactstrap';
 
 class Menu extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        selectedDish: null
+        selectedProduct: null
       }
     }
 
-    onDishSelect(dish) {
-        this.setState({ selectedDish: dish});
+    onProductSelect(product) {
+      this.setState({ selectedProduct: product});
     }
 
-    renderDish(dish) {
-        if (dish != null)
-            return(
-                <Card>
-                    <CardImg top src={dish.image} alt={dish.name} />
-                    <CardBody>
-                      <CardTitle>{dish.name}</CardTitle>
-                      <CardText>{dish.description}</CardText>
-                    </CardBody>
-                </Card>
-            );
-        else
-            return(
-                <div></div>
-            );
+    renderProduct(product) {
+      if (product != null)
+        return(
+          <Card>
+            <CardImg src={product.image} title={product.name} />
+            <CardBody>
+              <CardTitle>{product.name}</CardTitle>
+              <CardText>{product.description}</CardText>
+            </CardBody>
+          </Card>
+        );
+      else
+        return(
+          <div></div>
+        );
     }
 
     render() {
-        const menu = this.props.products.map((product) => {
-            return (
-              <div  className="col-3 col-md-3">
-                <Card key={product.id}
-                  onClick={() => this.onDishSelect(product)}>
-                  <CardImg src={product.image} title={product.name} />
-                  <CardTitle>{product.name}</CardTitle>
-                  <CardSubtitle>{product.description}</CardSubtitle>
-                </Card>
-              </div>
-            );
-        });
-
+      const menu = this.props.products.map((product) => {
         return (
-          <div className="container">
-              <div className="row">
-                  {menu}
-              </div>
-              <div className="row">
-                <div  className="col-12 col-md-5 m-1">
-                  {this.renderDish(this.state.selectedDish)}
-                </div>
-              </div>
+          <div  className="col-md-3">
+            <Card key={product.id}
+              onClick={() => this.onProductSelect(product)}>
+              <CardImg src={product.image} title={product.name} />
+              <CardBody>
+                <CardTitle>{product.name}</CardTitle>
+                <CardText>{product.description}</CardText>
+                <CardText class="a-price-symbol"><b>Price : ₹{product.price}</b></CardText>
+              </CardBody>
+            </Card>
           </div>
         );
-    }
+      });
+
+      return (
+        <div className="container">
+            <div className="row">
+                {menu}
+            </div>
+            <div className="row">
+              <div  className="col-md-3">
+                {this.renderProduct(this.state.selectedProduct)}
+              </div>
+            </div>
+        </div>
+      );
+  }
 }
 
 export default Menu;
