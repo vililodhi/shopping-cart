@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap';
+import {
+  Collapse,
+  Navbar,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem } from 'reactstrap';
 import logo from './logo.svg';
 import './App.css';
 import Menu from './components/MenuComponent';
@@ -18,15 +28,49 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar dark color="primary">
-          <div className="container">
-            <NavbarBrand href="/">Shopping Cart</NavbarBrand>
-            <NavbarBrand href="/">Hello, Sign in</NavbarBrand>
-            <NavbarBrand href="/">Cart</NavbarBrand>
-          </div>
+        <Navbar  dark color="primary" expand="md">
+          <NavbarBrand href="/">Shopping Cart</NavbarBrand>
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Hello, Sign in
+                  <b>Your Orders</b>
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    Sign In
+                  </DropdownItem>
+                  <DropdownItem>
+                    New Customer? Starts Here
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Try
+                  <b>Prime</b>
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    Join Prime
+                  </DropdownItem>
+                  <DropdownItem>
+                    Manage Prime
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="/"><span  class="icon" data-name="shopping-cart" data-code="0xe0e0" data-match="shopping cart"></span>Cart</NavLink>
+              </NavItem>
+              </Nav>
+          </Collapse>
         </Navbar>
         <img src={logo} className="App-logo" alt="logo" />
         <Menu products={this.state.products} />
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+          <a href="https://github.com/vaishalilodhi/shopping-cart/">vaishalilodhi</a>
+        </div>
       </div>
     );
   }
