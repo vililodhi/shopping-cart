@@ -28,14 +28,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar  dark color="primary" expand="md">
+        <Navbar dark color="primary" expand="md">
           <NavbarBrand href="/">Shopping Cart</NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Hello, Sign in
-                  <b>Your Orders</b>
+                  <b> Your Orders</b>
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
@@ -49,7 +49,7 @@ class App extends Component {
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Try
-                  <b>Prime</b>
+                  <b> Prime</b>
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
@@ -61,14 +61,14 @@ class App extends Component {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-                <NavLink href="/"><span  class="icon" data-name="shopping-cart" data-code="0xe0e0" data-match="shopping cart"></span>Cart</NavLink>
+                <NavLink href="/">Cart</NavLink>
               </NavItem>
               </Nav>
           </Collapse>
         </Navbar>
         <img src={logo} className="App-logo" alt="logo" />
         <Menu products={this.state.products} />
-        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <div className="footer-copyright text-center py-3">© 2018 Copyright:
           <a href="https://github.com/vaishalilodhi/shopping-cart/">vaishalilodhi</a>
         </div>
       </div>
