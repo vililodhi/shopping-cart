@@ -2,8 +2,8 @@ import React from 'react';
 
 const ApprovalCard = (props) => {
     return(
-        <div class="ui cards">
-            <div class="content">{props.children}</div>
+        <div className="ui cards">
+            <div className="content">{props.children}</div>
             <div className="extra content">
                 <div className="ui two buttons">
                     <div className="ui basic green button">Approve</div>
