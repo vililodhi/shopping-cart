@@ -145,7 +145,7 @@ export const PRODUCTS =
             category: 'dessert',
             label:'',
             price:'2.99',
-            description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced.',
+            description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced and its very tasty.',
             comments: [
                 {
                 id: 0,
@@ -329,7 +329,7 @@ export const PRODUCTS =
             category: 'dessert',
             label:'',
             price:'2.99',
-            description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced.',
+            description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced and its very tasty.',
             comments: [
                 {
                 id: 0,

@@ -15,7 +15,7 @@ class Menu extends Component {
 
     renderProduct(product) {
         if (product != null)
-            return(
+            return (
                 <Card>
                     <CardBody>
                         <CardImg src={product.image} title={product.name} />
@@ -26,7 +26,7 @@ class Menu extends Component {
                 </Card>
             );
         else
-            return(
+            return (
             <div></div>
         );
     }

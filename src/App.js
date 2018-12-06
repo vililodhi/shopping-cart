@@ -16,6 +16,7 @@ import Menu from './components/MenuComponent';
 import { PRODUCTS } from './shared/products';
 import CommentDetails from './facebook/CommentDetails';
 import ApprovalCard from './facebook/ApprovalCard';
+import CurrentPosition from './facebook/CurrentPosition';
 import faker from 'faker';
 
 class App extends Component {
@@ -75,14 +76,10 @@ class App extends Component {
                         <Menu products={this.state.products} />
                     </div>
                     <div className="col-md-2">
+                        <h5><CurrentPosition /></h5>
+                        <br></br>
+                        <h5>Review Comments</h5>
                         <div className="ui container comments">
-                            <ApprovalCard>
-                                <div>
-                                    <h4>Warning!</h4>
-                                    Are you sure, You want to do this?
-                                </div>
-                            </ApprovalCard>
-                            <br></br>
                             <ApprovalCard>
                                 <CommentDetails
                                     author={faker.name.firstName()}
@@ -117,6 +114,13 @@ class App extends Component {
                                     content="This is fake data!"
                                     avatar={faker.image.avatar()}
                                 />
+                            </ApprovalCard>
+                            <br></br>
+                            <ApprovalCard>
+                                <div>
+                                    <h4>Warning!</h4>
+                                    Are you sure, You want to do this?
+                                </div>
                             </ApprovalCard>
                             <br></br>
                         </div>
