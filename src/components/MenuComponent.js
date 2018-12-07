@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
+import Productdetail from './ProductdetailComponent';
 
 class Menu extends Component {
     constructor(props) {
@@ -16,14 +17,7 @@ class Menu extends Component {
     renderProduct(product) {
         if (product != null)
             return (
-                <Card>
-                    <CardBody>
-                        <CardImg src={product.image} title={product.name} />
-                        <CardTitle>{product.name}</CardTitle>
-                        <CardText>{product.description}</CardText>
-                        <CardText><b>Price : ₹{product.price}</b></CardText>
-                    </CardBody>
-                </Card>
+                <Productdetail selectedProduct={this.state.selectedProduct}/>
             );
         else
             return (
