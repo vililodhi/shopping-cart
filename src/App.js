@@ -16,7 +16,7 @@ import Menu from './components/MenuComponent';
 import { PRODUCTS } from './shared/products';
 import CommentDetails from './facebook/CommentDetails';
 import ApprovalCard from './facebook/ApprovalCard';
-import CurrentPosition from './facebook/CurrentPosition';
+import CurrentPosition from './seasons/CurrentPosition';
 import faker from 'faker';
 
 class App extends Component {
@@ -42,11 +42,14 @@ class App extends Component {
                                     <b> Your Orders</b>
                                 </DropdownToggle>
                                 <DropdownMenu right>
-                                    <DropdownItem>
+                                    <DropdownItem href="/">
                                         Sign In
                                     </DropdownItem>
                                     <DropdownItem>
                                         New Customer? Starts Here
+                                    </DropdownItem>
+                                    <DropdownItem href="/">
+                                        Additional Features
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledDropdown>
@@ -56,16 +59,16 @@ class App extends Component {
                                     <b> Prime</b>
                                 </DropdownToggle>
                                 <DropdownMenu right>
-                                    <DropdownItem>
+                                    <DropdownItem href="/">
                                         Join Prime
                                     </DropdownItem>
-                                    <DropdownItem>
+                                    <DropdownItem href="/">
                                         Manage Prime
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledDropdown>
                             <NavItem>
-                                <NavLink href="/">Cart</NavLink>
+                                <NavLink href="/"><i class="shopping cart icon"></i>Cart</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>

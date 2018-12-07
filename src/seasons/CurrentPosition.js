@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SeasonDisplay from './SeasonDisplay';
 
 class CurrentPosition extends Component {
     constructor(props) {
@@ -23,7 +24,7 @@ class CurrentPosition extends Component {
 
     render() {
         if (this.state.lat && !this.state.errorMessage) {
-            return <div>Latitude : {this.state.lat}</div>
+            return <div><SeasonDisplay lat={this.state.lat} /></div>
         }
 
         if (this.state.errorMessage && !this.state.lat) {
@@ -31,7 +32,7 @@ class CurrentPosition extends Component {
         }
 
         if (!this.state.lat && !this.state.errorMessage) {
-            return <div>Loading..</div>
+            return <i className="spinner icon" title="Loading.."></i>
         }
     }
 }
