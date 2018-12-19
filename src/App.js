@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Menubar from './shared/Navbar.js';
 import Menu from './components/MenuComponent';
-import Login from './components/LoginComponent';
 import { PRODUCTS } from './shared/products';
 import CommentDetails from './facebook/CommentDetails';
 import ApprovalCard from './facebook/ApprovalCard';
@@ -24,7 +22,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Menubar />
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src="/assets/Home.gif" className="App-logo" alt="logo" />
                 <div className="row">
                     <div className="col-md-10">
                         <Menu products={this.state.products} />

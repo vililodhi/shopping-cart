@@ -2,12 +2,12 @@ export const PRODUCTS =
     [
         {
             id: 0,
-            name:'Uthappizza',
-            image: 'assets/images/uthappizza.png',
+            name:'Leather Purse',
+            image: 'assets/product/belle.jpg',
             category: 'mains',
             label:'Hot',
             price:'4.99',
-            description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives.',
+            description:'Disney Belle Debossed Faux Leather Purse | ThinkGeek',
             comments: [
                 {
                 id: 0,
@@ -48,8 +48,8 @@ export const PRODUCTS =
         },
         {
             id: 1,
-            name:'Zucchipakoda',
-            image: 'assets/images/zucchipakoda.png',
+            name:'Black Shirt',
+            image: 'assets/product/black_shirt.jpg',
             category: 'appetizer',
             label:'',
             price:'1.99',
@@ -94,8 +94,8 @@ export const PRODUCTS =
         },
         {
             id: 2,
-            name:'Vadonut',
-            image: 'assets/images/vadonut.png',
+            name:'Pack of three T-shirts',
+            image: 'assets/product/three_set.jpg',
             category: 'appetizer',
             label:'New',
             price:'1.99',
@@ -140,8 +140,8 @@ export const PRODUCTS =
         },
         {
             id: 3,
-            name:'ElaiCheese Cake',
-            image: 'assets/images/elaicheesecake.png',
+            name:'Black and white T-shirt',
+            image: 'assets/product/black_white.jpg',
             category: 'dessert',
             label:'',
             price:'2.99',
@@ -186,8 +186,8 @@ export const PRODUCTS =
         },
         {
             id: 4,
-            name:'Uthappizza',
-            image: 'assets/images/uthappizza.png',
+            name:'Pink Shoe',
+            image: 'assets/product/shoe.jpg',
             category: 'mains',
             label:'Hot',
             price:'4.99',
@@ -232,8 +232,8 @@ export const PRODUCTS =
         },
         {
             id: 5,
-            name:'Zucchipakoda',
-            image: 'assets/images/zucchipakoda.png',
+            name:'White Leather Purse',
+            image: 'assets/product/purse.jpg',
             category: 'appetizer',
             label:'',
             price:'1.99',
@@ -278,8 +278,8 @@ export const PRODUCTS =
         },
         {
             id: 6,
-            name:'Vadonut',
-            image: 'assets/images/vadonut.png',
+            name:'Pink Top',
+            image: 'assets/product/pink.jpg',
             category: 'appetizer',
             label:'New',
             price:'1.99',
@@ -324,8 +324,8 @@ export const PRODUCTS =
         },
         {
             id: 7,
-            name:'ElaiCheese Cake',
-            image: 'assets/images/elaicheesecake.png',
+            name:'Skin Fit Jeans',
+            image: 'assets/product/jeans.jpg',
             category: 'dessert',
             label:'',
             price:'2.99',
