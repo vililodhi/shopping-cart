@@ -34,8 +34,8 @@ class Menu extends Component {
                         <CardImg src={product.image} title={product.name} />
                         <CardBody>
                             <CardTitle>{product.name}</CardTitle>
-                            <CardText>{product.description}</CardText>
                             <CardText><b>Price : ₹{product.price}</b></CardText>
+                            <button className="btn btn-primary"><i className="shopping cart icon"></i> Add to cart</button>
                         </CardBody>
                     </Card>
                     <br></br>

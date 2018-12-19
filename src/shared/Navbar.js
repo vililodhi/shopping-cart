@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import {
-  Collapse,
-  Navbar,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+    Navbar,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem } from 'reactstrap';
 import SearchBar from '../components/SearchBarComponent';
 
 class Menubar extends Component {
@@ -21,12 +20,11 @@ class Menubar extends Component {
                 <Nav className="ml-auto" navbar>
                     <UncontrolledDropdown nav inNavbar>
                         <DropdownToggle nav caret>
-                            Hello,
-                            <b> Your Orders</b>
+                            Hello, <b> Your Orders</b>
                         </DropdownToggle>
                         <DropdownMenu right>
                             <DropdownItem href="/">
-                                Login
+                                Sign in
                             </DropdownItem>
                             <DropdownItem>
                                 New Customer? Starts Here
@@ -38,8 +36,7 @@ class Menubar extends Component {
                     </UncontrolledDropdown>
                     <UncontrolledDropdown nav inNavbar>
                         <DropdownToggle nav caret>
-                            Try
-                            <b> Prime</b>
+                            Try<b> Prime</b>
                         </DropdownToggle>
                         <DropdownMenu right>
                             <DropdownItem href="/">
