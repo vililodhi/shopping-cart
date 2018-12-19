@@ -1,18 +1,9 @@
 import React, { Component } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
 import logo from './logo.svg';
 import './App.css';
+import Menubar from './shared/Navbar.js';
 import Menu from './components/MenuComponent';
+import Login from './components/LoginComponent';
 import { PRODUCTS } from './shared/products';
 import CommentDetails from './facebook/CommentDetails';
 import ApprovalCard from './facebook/ApprovalCard';
@@ -32,47 +23,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Navbar dark color="primary" expand="md">
-                    <NavbarBrand href="/">Shopping Cart</NavbarBrand>
-                    <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
-                            <UncontrolledDropdown nav inNavbar>
-                                <DropdownToggle nav caret>
-                                    Hello,
-                                    <b> Your Orders</b>
-                                </DropdownToggle>
-                                <DropdownMenu right>
-                                    <DropdownItem href="/">
-                                        Sign In
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        New Customer? Starts Here
-                                    </DropdownItem>
-                                    <DropdownItem href="/">
-                                        Additional Features
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <UncontrolledDropdown nav inNavbar>
-                                <DropdownToggle nav caret>
-                                    Try
-                                    <b> Prime</b>
-                                </DropdownToggle>
-                                <DropdownMenu right>
-                                    <DropdownItem href="/">
-                                        Join Prime
-                                    </DropdownItem>
-                                    <DropdownItem href="/">
-                                        Manage Prime
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <NavItem>
-                                <NavLink href="/"><i class="shopping cart icon"></i>Cart</NavLink>
-                            </NavItem>
-                        </Nav>
-                    </Collapse>
-                </Navbar>
+                <Menubar />
                 <img src={logo} className="App-logo" alt="logo" />
                 <div className="row">
                     <div className="col-md-10">
