@@ -28,14 +28,13 @@ class Menu extends Component {
     render() {
         const menu = this.props.products.map((product) => {
             return (
-                <div className="col-md-3">
-                    <Card key={product.id}
-                    onClick={() => this.onProductSelect(product)}>
+                <div className="col-md-3" key={product.id}>
+                    <Card>
                         <CardImg src={product.image} title={product.name} />
                         <CardBody>
                             <CardTitle>{product.name}</CardTitle>
                             <CardText><b>Price : ₹{product.price}</b></CardText>
-                            <button className="btn btn-primary"><i className="shopping cart icon"></i> Add to cart</button>
+                            <button className="btn btn-primary" onClick={() => this.onProductSelect(product)}><i className="shopping cart icon"></i> Add to cart</button>
                         </CardBody>
                     </Card>
                     <br></br>
