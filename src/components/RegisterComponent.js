@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import Navbar from '../shared/Navbar.js';
 
-class Login extends Component {
+class Register extends Component {
 
     render() {
         return (
             <div>
                 <Navbar />
-                Login here!!
+                Register here!!
             </div>
         );
     }
 }
 
-export default Login;
+export default Register;
