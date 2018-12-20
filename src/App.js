@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Menubar from './shared/Navbar.js';
+import Routes from './routes';
+import Navbar from './shared/Navbar';
 import Menu from './components/MenuComponent';
 import { PRODUCTS } from './shared/products';
 import CommentDetails from './facebook/CommentDetails';
@@ -21,7 +22,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Menubar />
+                <Navbar />
                 <img src="/assets/Home.gif" className="App-logo" alt="logo" />
                 <div className="row">
                     <div className="col-md-10">
@@ -78,6 +79,7 @@ class App extends Component {
                         </div>
                     </div>
                 </div>
+                <Routes />
                 <div className="footer-copyright text-center py-3">© 2018 Copyright:
                     <a href="https://github.com/vaishalilodhi/shopping-cart/">vaishalilodhi</a>
                 </div>

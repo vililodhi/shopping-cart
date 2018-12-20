@@ -9,6 +9,7 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import SearchBar from '../components/SearchBarComponent';
 
 class Menubar extends Component {
@@ -23,13 +24,13 @@ class Menubar extends Component {
                             Hello, <b> Your Orders</b>
                         </DropdownToggle>
                         <DropdownMenu right>
-                            <DropdownItem href="/">
-                                Sign in
+                            <DropdownItem>
+                                <Link to="">Sign in</Link>
                             </DropdownItem>
                             <DropdownItem>
                                 New Customer? Starts Here
                             </DropdownItem>
-                            <DropdownItem href="/">
+                            <DropdownItem>
                                 Additional Features
                             </DropdownItem>
                         </DropdownMenu>
@@ -39,10 +40,10 @@ class Menubar extends Component {
                             Try<b> Prime</b>
                         </DropdownToggle>
                         <DropdownMenu right>
-                            <DropdownItem href="/">
+                            <DropdownItem>
                                 Join Prime
                             </DropdownItem>
-                            <DropdownItem href="/">
+                            <DropdownItem>
                                 Manage Prime
                             </DropdownItem>
                         </DropdownMenu>
