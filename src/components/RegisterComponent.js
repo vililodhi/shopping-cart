@@ -4,9 +4,9 @@ import Navbar from '../shared/Navbar';
 class Register extends Component {
     render() {
         return (
-            <div>
+            <div className="upper-margin">
                 <Navbar />
-                Register here!!
+                <h4>Register here!!</h4>
             </div>
         );
     }

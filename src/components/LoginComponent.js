@@ -4,9 +4,9 @@ import Navbar from '../shared/Navbar';
 class Login extends Component {
     render() {
         return (
-            <div>
+            <div className="upper-margin">
                 <Navbar />
-                Login here!!
+                <h4>Login Here!</h4>
             </div>
         );
     }
