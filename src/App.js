@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Routes from './routes';
 import Navbar from './shared/Navbar';
 import Menu from './components/MenuComponent';
 import { PRODUCTS } from './shared/products';
@@ -79,7 +78,6 @@ class App extends Component {
                         </div>
                     </div>
                 </div>
-                <Routes />
                 <div className="footer-copyright text-center py-3">© 2018 Copyright:
                     <a href="https://github.com/vaishalilodhi/shopping-cart/">vaishalilodhi</a>
                 </div>

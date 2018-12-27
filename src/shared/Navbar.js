@@ -25,10 +25,10 @@ class Menubar extends Component {
                         </DropdownToggle>
                         <DropdownMenu right>
                             <DropdownItem>
-                                <Link to="">Sign in</Link>
+                                <Link to="/login">Sign in</Link>
                             </DropdownItem>
                             <DropdownItem>
-                                New Customer? Starts Here
+                                New Customer? <Link to="/register"> Starts Here</Link>
                             </DropdownItem>
                             <DropdownItem>
                                 Additional Features
