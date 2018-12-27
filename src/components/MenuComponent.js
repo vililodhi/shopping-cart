@@ -21,8 +21,8 @@ class Menu extends Component {
             );
         else
             return (
-            <div></div>
-        );
+                <div></div>
+            );
     }
 
     render() {

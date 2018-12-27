@@ -24,15 +24,12 @@ class Menubar extends Component {
                             Hello, <b> Your Orders</b>
                         </DropdownToggle>
                         <DropdownMenu right>
-                            <DropdownItem>
-                                <Link to="/login">Sign in</Link>
-                            </DropdownItem>
-                            <DropdownItem>
-                                New Customer? <Link to="/register"> Starts Here</Link>
-                            </DropdownItem>
-                            <DropdownItem>
-                                Additional Features
-                            </DropdownItem>
+                            <Link to="/login">
+                                <DropdownItem>Sign in</DropdownItem>
+                            </Link>
+                            <Link to="/register">
+                                <DropdownItem>New Customer? Starts Here</DropdownItem>
+                            </Link>
                         </DropdownMenu>
                     </UncontrolledDropdown>
                     <UncontrolledDropdown nav inNavbar>
@@ -40,17 +37,19 @@ class Menubar extends Component {
                             Try<b> Prime</b>
                         </DropdownToggle>
                         <DropdownMenu right>
-                            <DropdownItem>
-                                Join Prime
-                            </DropdownItem>
-                            <DropdownItem>
-                                Manage Prime
-                            </DropdownItem>
+                            <Link to="/prime">
+                                <DropdownItem>Join Prime</DropdownItem>
+                            </Link>
+                            <Link to="/manage-prime">
+                                <DropdownItem>Manage Prime</DropdownItem>
+                            </Link>
                         </DropdownMenu>
                     </UncontrolledDropdown>
-                    <NavItem>
-                        <NavLink href="/"><i className="shopping cart icon"></i>Cart</NavLink>
-                    </NavItem>
+                    <Link to="/cart">
+                        <NavItem>
+                            <NavLink><i className="shopping cart icon"></i> Cart</NavLink>
+                        </NavItem>
+                    </Link>
                 </Nav>
             </Navbar>
         );
