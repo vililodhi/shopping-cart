@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import Navbar from '../shared/Navbar';
+import Productdetail from './ProductdetailComponent';
 
-class Register extends Component {
+class Cart extends Component {
     render() {
         return (
             <div className="top-margin">
                 <Navbar />
-                <h4>Register here!!</h4>
+                <h4>Cart</h4>
             </div>
         );
     }
 }
 
-export default Register;
+export default Cart;
