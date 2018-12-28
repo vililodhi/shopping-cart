@@ -3,7 +3,6 @@ import {
     Navbar,
     NavbarBrand,
     Nav,
-    NavItem,
     NavLink,
     UncontrolledDropdown,
     DropdownToggle,
@@ -27,6 +26,7 @@ class Menubar extends Component {
                             <Link to="/login">
                                 <DropdownItem>Sign in</DropdownItem>
                             </Link>
+                            <DropdownItem divider />
                             <Link to="/register">
                                 <DropdownItem>New Customer? Starts Here</DropdownItem>
                             </Link>
@@ -37,19 +37,14 @@ class Menubar extends Component {
                             Try<b> Prime</b>
                         </DropdownToggle>
                         <DropdownMenu right>
-                            <Link to="/prime">
-                                <DropdownItem>Join Prime</DropdownItem>
-                            </Link>
-                            <Link to="/manage-prime">
-                                <DropdownItem>Manage Prime</DropdownItem>
-                            </Link>
+                            <DropdownItem>Join Prime</DropdownItem>
+                            <DropdownItem divider />
+                            <DropdownItem>Manage Prime</DropdownItem>
                         </DropdownMenu>
                     </UncontrolledDropdown>
-                    <Link to="/cart">
-                        <NavItem>
-                            <NavLink><i className="shopping cart icon"></i> Cart</NavLink>
-                        </NavItem>
-                    </Link>
+                    <NavLink href="/cart">
+                        <i className="shopping cart icon"></i> Cart
+                    </NavLink>
                 </Nav>
             </Navbar>
         );
