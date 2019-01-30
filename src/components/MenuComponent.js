@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
-import Productdetail from './ProductdetailComponent';
+import Cart from './CartComponent';
 
 class Menu extends Component {
     constructor(props) {
@@ -17,11 +17,11 @@ class Menu extends Component {
     renderProduct(product) {
         if (product != null)
             return (
-                <Productdetail selectedProduct={this.state.selectedProduct}/>
+                <Cart selectedProduct={this.state.selectedProduct} />
             );
         else
             return (
-                <div></div>
+                <div>No items in cart</div>
             );
     }
 
@@ -34,7 +34,10 @@ class Menu extends Component {
                         <CardBody>
                             <CardTitle>{product.name}</CardTitle>
                             <CardText><b>Price : ₹{product.price}</b></CardText>
-                            <button className="btn btn-primary" onClick={() => this.onProductSelect(product)}><i className="shopping cart icon"></i> Add to cart</button>
+                            <button
+                              className="btn btn-primary"
+                              onClick={() => this.onProductSelect(product)}
+                            ><i className="shopping cart icon"></i> Add to cart</button>
                         </CardBody>
                     </Card>
                     <br></br>
