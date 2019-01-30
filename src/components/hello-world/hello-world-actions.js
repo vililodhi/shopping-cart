@@ -5,6 +5,6 @@ export const setMessage = (message) => ({
     message
 });
 
-export const getMessage = () => dispatch => {
-   dispatch(setMessage('hello world!!'))
+export const getMessage = (test) => dispatch => {
+   dispatch(setMessage(test))
 }

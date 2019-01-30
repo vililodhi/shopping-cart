@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import App from './App';
-import Login from './components/LoginComponent';
-import Register from './components/RegisterComponent';
-import Cart from './components/CartComponent';
+import Login from './components/user/LoginComponent';
+import Register from './components/user/RegisterComponent';
+import Cart from './components/cart/CartComponent';
 import helloWorld from './components/hello-world/hello-world-component';
 
 class Routes extends Component {

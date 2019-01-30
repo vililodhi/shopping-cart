@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './shared/Navbar';
-import Menu from './components/MenuComponent';
+import Menu from './components/user/MenuComponent';
 import { PRODUCTS } from './shared/products';
 import CommentDetails from './facebook/CommentDetails';
 import ApprovalCard from './facebook/ApprovalCard';

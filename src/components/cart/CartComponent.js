@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
-import Navbar from '../shared/Navbar';
+import Navbar from '../../shared/Navbar';
 
 const Cart = (props) => {
     if (props.selectedProduct) {

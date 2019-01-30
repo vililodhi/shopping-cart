@@ -25,7 +25,12 @@ export class HelloWorld extends Component {
 
     componentDidMount() {
         const { dispatch } = this.props;
-        dispatch(getMessage());
+        dispatch(getMessage('hello '));
+    }
+
+    onClickHere() {
+        const { dispatch } = this.props;
+        dispatch(getMessage('Hurry, SuccessFully implemented Redux!! '));
     }
 
     render() {
@@ -33,7 +38,9 @@ export class HelloWorld extends Component {
         return (
             <div className="row top-margin">
                 <Navbar />
-                <h1>{ message }</h1>
+                <h3>{ message }</h3>
+                <button className="btn btn-primary"
+                onClick={() => this.onClickHere()}> Click here </button>
             </div>
         );
     }
