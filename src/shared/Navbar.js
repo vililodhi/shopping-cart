@@ -9,7 +9,7 @@ import {
     DropdownMenu,
     DropdownItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import SearchBar from '../components/SearchBarComponent';
+import SearchBar from '../components/user/SearchBarComponent';
 
 class Menubar extends Component {
     render() {

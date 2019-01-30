@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
-import Cart from './CartComponent';
+import Cart from '../cart/CartComponent';
 
 class Menu extends Component {
     constructor(props) {
