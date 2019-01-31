@@ -19,7 +19,13 @@ const Cart = (props) => {
             </div>
         );
     } else {
-        return <div>Your Cart is Empty.</div>;
+        return (
+            <div className="top-margin">
+                <Navbar />
+                <h4>Cart items</h4>
+                <div>Your Cart is Empty.</div>
+            </div>
+        );
     }
 }
 
