@@ -22,7 +22,6 @@ class App extends Component {
         return (
             <div className="App">
                 <Navbar />
-                <img src="/assets/Home.gif" className="App-logo" alt="logo" />
                 <div className="row">
                     <div className="col-md-10">
                         <Menu products={this.state.products} />

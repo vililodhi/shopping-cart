@@ -5,6 +5,7 @@ import Login from './components/user/LoginComponent';
 import Register from './components/user/RegisterComponent';
 import Cart from './components/cart/CartComponent';
 import helloWorld from './components/hello-world/hello-world-component';
+import localStorage from './components/local-storage/local';
 
 class Routes extends Component {
     render() {
@@ -17,6 +18,7 @@ class Routes extends Component {
                         <Route path="/register" exact component={Register} />
                         <Route path="/cart" exact component={Cart} />
                         <Route path={ '/hello-world' } exact component={ helloWorld } />
+                        <Route path={ '/local-storage' } exact component={ localStorage } />
                     </div>
                 </BrowserRouter>
             </div>
