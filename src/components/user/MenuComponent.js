@@ -14,17 +14,6 @@ class Menu extends Component {
         this.setState({ selectedProduct: product});
     }
 
-    renderProduct(product) {
-        if (product != null)
-            return (
-                <Cart selectedProduct={this.state.selectedProduct} />
-            );
-        else
-            return (
-                <div>No items in cart</div>
-            );
-    }
-
     render() {
         const menu = this.props.products.map((product) => {
             return (
@@ -48,12 +37,12 @@ class Menu extends Component {
         return (
             <div className="container">
                 <div className="row">
-                    {menu}
+                { this.state.selectedProduct
+                ? <div className="col-md-4">
+                    <Cart selectedProduct={this.state.selectedProduct} />
                 </div>
-                <div className="row">
-                    <div className="col-md-3">
-                        {this.renderProduct(this.state.selectedProduct)}
-                    </div>
+                : menu
+                }
                 </div>
             </div>
         );
