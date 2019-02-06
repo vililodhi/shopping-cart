@@ -12,38 +12,25 @@ class Menu extends Component {
     }
 
     onProductSelect(product) {
-        // create a new item
-        const newItem = {
-            id: 1 + Math.random(),
-            value: this.state.newItem.slice()
-        };
-
-        // copy current list of items
-        const list = [...this.state.list];
-
-        // add the new item to the list
-        list.push(newItem);
-
-        // update state with new list, reset the new item input
-        this.setState({
-            list,
-            selectedProduct: ""
-        });
-
+        let list = (localStorage.getItem('selectedProduct') !== null )
+            ? Object.values(JSON.parse(localStorage.getItem('selectedProduct')))
+            : [];
+        list.push(product);
+        localStorage.setItem('selectedProduct', JSON.stringify(list));
     }
 
     render() {
         const menu = this.props.products.map((product) => {
             return (
-                <div className="col-md-3 top-margin" key={product.id}>
+                <div className="col-md-3" key={product.id}>
                     <Card>
                         <CardImg src={product.image} title={product.name} />
                         <CardBody>
                             <CardTitle>{product.name}</CardTitle>
                             <CardText><b>Price : ₹{product.price}</b></CardText>
                             <Link to="/cart"
-                              className="btn btn-primary"
-                              onClick={() => this.onProductSelect(product)}
+                                className="btn btn-primary"
+                                onClick={() => this.onProductSelect(product)}
                             ><i className="shopping cart icon"></i> Add to cart</Link>
                         </CardBody>
                     </Card>
@@ -54,7 +41,7 @@ class Menu extends Component {
 
         return (
             <div className="container">
-                <div className="row">
+                <div className="row top-margin">
                 { menu }
                 </div>
             </div>
