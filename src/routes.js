@@ -7,7 +7,7 @@ import Cart from './components/cart/CartComponent';
 import helloWorld from './components/hello-world/hello-world-component';
 import localStorage from './components/local-storage/local';
 import demos from './facebook/CommentDetails';
-import Songs from './components/songs/SongsComponent';
+import Songs from './components/songs/SongListComponent';
 
 class Routes extends Component {
     render() {
@@ -22,7 +22,7 @@ class Routes extends Component {
                         <Route path={ '/hello-world' } exact component={ helloWorld } />
                         <Route path={ '/local-storage' } exact component={ localStorage } />
                         <Route path={ '/demos' } exact component={ demos } />
-                        <Route path={ '/songs' } exact component={ Songs } />
+                        <Route path={ '/music' } exact component={ Songs } />
                     </div>
                 </BrowserRouter>
             </div>
