@@ -23,7 +23,7 @@ const songsReducer = () => {
             duration: '3:30'
         },
         {
-            title: 'simmba',
+            title: 'Simmba',
             duration: '4:00'
         }
     ];

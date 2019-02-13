@@ -5,6 +5,7 @@ class Footer extends Component {
     render() {
         return (
             <div className="text-center py-3">
+                <Link to="/">Go Back</Link>
                 <h3 className="my-1">Demo Links</h3>
                 <Link to="/demos" className="my-1">Fake Data</Link> ,
                 <Link to="/local-storage" className="my-1">Local Storage </Link> ,
