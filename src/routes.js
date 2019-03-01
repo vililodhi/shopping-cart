@@ -8,6 +8,7 @@ import helloWorld from './components/hello-world/hello-world-component';
 import localStorage from './components/local-storage/local';
 import demos from './facebook/CommentDetails';
 import Songs from './components/songs/SongListComponent';
+import PostList from './components/postList/PostList';
 
 class Routes extends Component {
     render() {
@@ -23,6 +24,7 @@ class Routes extends Component {
                         <Route path={ '/local-storage' } exact component={ localStorage } />
                         <Route path={ '/demos' } exact component={ demos } />
                         <Route path={ '/music' } exact component={ Songs } />
+                        <Route path={ '/post' } exact component={ PostList } />
                     </div>
                 </BrowserRouter>
             </div>

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@kenshooui/react-multi-select": "^1.0.69",
+    "axios": "^0.18.0",
     "bootstrap": "4.0.0",
     "es6-error": "^4.1.1",
     "faker": "^4.1.0",
