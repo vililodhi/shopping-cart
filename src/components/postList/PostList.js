@@ -19,9 +19,9 @@ class PostList extends Component {
                         <div className="description">
                             <h2>{post.title}</h2>
                             <p>{post.body}</p>
+                            <UserHeader userId={post.userId} />
                         </div>
                     </div>
-                    <UserHeader userId={10} />
                 </div>
             );
         });
@@ -31,8 +31,10 @@ class PostList extends Component {
         return (
             <div className="top-margin">
                 <Navbar />
-                <h1> Post </h1>
-                {this.renderList()}
+                <h3> Post </h3>
+                <div className="ui relaxed divided list">
+                    {this.renderList()}
+                </div>
                 <Footer />
             </div>
         );

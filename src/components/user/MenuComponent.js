@@ -30,7 +30,7 @@ class Menu extends Component {
                             <CardText><b>Price : ₹{product.price}</b></CardText>
                             <Link to="/cart"
                                 className="btn btn-primary"
-                                onClick={() => this.onProductSelect(product)}
+                                onClick={() => this.onProductSelect(product.id)}
                             ><i className="shopping cart icon"></i> Add to cart</Link>
                         </CardBody>
                     </Card>
