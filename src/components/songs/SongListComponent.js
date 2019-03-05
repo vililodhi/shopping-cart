@@ -37,7 +37,7 @@ class SongList extends Component {
                             </div>
                         </div>
                         <div className="column eight wide">
-                            <h1>Selected Song</h1>
+                            <h1>Selected Song Details:</h1>
                             <SongDetails />
                         </div>
                     </div>
